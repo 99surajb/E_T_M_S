@@ -1,0 +1,12 @@
+This is an interface called StorageService, which defines the methods that must be implemented by any class that wants to provide storage functionality. Here's what each method does:
+
+loadAll(): This method returns a list of strings, representing the names of all the files stored in the system.
+store(MultipartFile file): This method accepts a MultipartFile object, representing the file that needs to be stored, and returns a string, which is the name of the stored file. This method stores the file in the underlying storage system.
+load(String fileName): This method accepts a string fileName, which is the name of the file that needs to be loaded, and returns a Resource object, representing the loaded file. If the file does not exist, it returns null.
+delete(String fileName): This method accepts a string fileName, which is the name of the file that needs to be deleted. This method deletes the file from the underlying storage system. If the file does not exist, it does nothing.
+Implementations of this interface can use any storage system they prefer, such as a file system, a database, or cloud storage. The methods defined in this interface provide a standard way to interact with any storage system, making it easier to swap out one implementation for another.
+
+
+
+
+

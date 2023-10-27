@@ -1,0 +1,13 @@
+This Java code defines a class called DiskStorageServiceImpl that implements the StorageService interface. The purpose of this class is to provide an implementation for storing and retrieving files on disk.
+
+Here is a brief explanation of each method in the class:
+
+loadAll(): This method returns a list of all file names present in the directory specified by the BASEPATH field.
+
+store(MultipartFile file): This method generates a random file name using a UUID (Universally Unique Identifier) and saves the file to disk in the directory specified by the BASEPATH field. It returns the generated file name if the file is successfully saved, or null otherwise.
+
+load(String fileName): This method takes a file name as an argument and returns a Resource object that represents the file if it exists in the directory specified by the BASEPATH field. If the file does not exist, it returns null.
+
+delete(String fileName): This method takes a file name as an argument and deletes the file from the directory specified by the BASEPATH field if it exists.
+
+The @Value annotation is used to inject the value of the disk.upload.basepath property from the application.properties file into the BASEPATH field. This property specifies the directory on disk where files will be stored. The @Component annotation marks this class as a Spring component that can be automatically wired into other classes as a dependency.
